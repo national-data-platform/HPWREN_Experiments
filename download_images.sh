@@ -17,7 +17,6 @@ while read -r line; do
     #Replace + with %2B for images with fire/smoke
     if [[ $image_filename == *$plus_original* ]]; then
         modified_image_filename="${image_filename//$plus_original/$plus_replace}"
-        echo $modified_image_filename
         image_url="$append$fire_dir$modified_image_filename"
     else
         image_url="$append$image_path"
